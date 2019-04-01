@@ -1,0 +1,22 @@
+.wrong {
+	background-color: rgba(255,24,27,0.5);
+}
+
+.right {
+	background-color: rgba(73,255,24,0.5);
+}
+.photo {
+	max-height: 600px;
+	max-width: 560px;
+}
+
+.alb_inf {
+	text-align: center;
+}
+
+.btn {
+    background: #bfbfbf;
+}
+.btn:hover {
+    background: #9e9d9d;
+}
