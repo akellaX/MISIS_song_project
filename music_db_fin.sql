@@ -126,34 +126,6 @@ INSERT INTO `challenges` VALUES (1,'easy',5,'first challenge');
 UNLOCK TABLES;
 
 --
--- Table structure for table `score`
---
-
-DROP TABLE IF EXISTS `score`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `score` (
-  `ID` int(11) NOT NULL AUTO_INCREMENT,
-  `user_id` int(11) DEFAULT NULL,
-  `wins` int(11) DEFAULT NULL,
-  `losses` int(11) DEFAULT NULL,
-  PRIMARY KEY (`ID`),
-  KEY `Score_fk0` (`user_id`),
-  CONSTRAINT `Score_fk0` FOREIGN KEY (`user_id`) REFERENCES `user` (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `score`
---
-
-LOCK TABLES `score` WRITE;
-/*!40000 ALTER TABLE `score` DISABLE KEYS */;
-INSERT INTO `score` VALUES (1,1,112,373),(3,6,8,27);
-/*!40000 ALTER TABLE `score` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `song`
 --
 
@@ -213,6 +185,34 @@ INSERT INTO `user` VALUES (1,'admin','admin','Anna','Dodonova','admin'),(6,'batm
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+--
+-- Table structure for table `score`
+--
+
+DROP TABLE IF EXISTS `score`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `score` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `wins` int(11) DEFAULT NULL,
+  `losses` int(11) DEFAULT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `Score_fk0` (`user_id`),
+  CONSTRAINT `Score_fk0` FOREIGN KEY (`user_id`) REFERENCES `user` (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `score`
+--
+
+LOCK TABLES `score` WRITE;
+/*!40000 ALTER TABLE `score` DISABLE KEYS */;
+INSERT INTO `score` VALUES (1,1,112,373),(3,6,8,27);
+/*!40000 ALTER TABLE `score` ENABLE KEYS */;
+UNLOCK TABLES;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
