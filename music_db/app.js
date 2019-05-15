@@ -65,10 +65,10 @@ app.listen('3000',function(){
 });
 
 var db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '53772626',
-    database: 'music_db'
+    host: 'remotemysql.com',
+    user: 'TDdqhLctfV',
+    password: 'J6fiIBpUUq',
+    database: 'TDdqhLctfV'
 });
 
 db.connect(function(err){

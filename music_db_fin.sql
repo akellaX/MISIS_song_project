@@ -19,6 +19,19 @@
 -- Table structure for table `album`
 --
 
+DROP TABLE IF EXISTS `artist`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `artist` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `description` text,
+  `photo` text,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+
 DROP TABLE IF EXISTS `album`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
@@ -40,6 +53,12 @@ CREATE TABLE `album` (
 -- Dumping data for table `album`
 --
 
+LOCK TABLES `artist` WRITE;
+/*!40000 ALTER TABLE `artist` DISABLE KEYS */;
+INSERT INTO `artist` VALUES (1,'Tegan and Sara','Tegan and Sara /ˈtiːɡən, ˈsɛərə/ are a Canadian indie pop band formed in 1998 in Calgary, Alberta, composed of identical twin sisters Tegan Rain Quin and Sara Keirsten Quin (born September 19, 1980).[2][3] Both musicians are songwriters and multi-instrumentalists.','https://media.glamour.com/photos/575f282a225ba9336fea5689/1:1/w_352/TeganAndSara-01.jpg'),(2,'Blondie','Blondie is an American rock band founded by singer Debbie Harry and guitarist Chris Stein.[1] The band was a pioneer in the early American new wave and punk scenes of the mid-late 1970s. Its first two albums contained strong elements of these genres, and although successful in the United Kingdom and Australia, Blondie was regarded as an underground band in the United States until the release of Parallel Lines in 1978. Over the next three years, the band achieved several hit singles[2] including \"Heart of Glass\", \"Call Me\", \"Rapture\" and \"The Tide Is High\" and became noted for its eclectic mix of musical styles incorporating elements of disco, pop, reggae, and early rap music.','https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Blondie1977.jpg/1200px-Blondie1977.jpg'),(3,'Heart',' Heart is an American rock band that first found success in Canada and later in the United States and worldwide. Over the group\'s four-decade history, it has had three primary lineups, with the constant center of the group since 1973 being sisters Ann Wilson (lead singer) and Nancy Wilson (guitarist).','http://img.wennermedia.com/social/rs-248025-RS-Heart.jpg'),(4,'Muse','британская рок-группа, образованная в 1994 году в городе Тинмут (графство Девон). Группа состоит из трёх участников: Мэттью Беллами (вокал, гитара, клавиши), Криса Уолстенхолма (бас-гитара, бэк-вокал, вокал) и Доминика Ховарда (ударные).','http://images.genius.com/01ea82c74a235e08af02847715fcab35.750x750x1.jpg'),(5,'George Michael','Georgios Kyriacos Panayiotou (25 June 1963 – 25 December 2016), known professionally as George Michael, was an English singer, songwriter, record producer, and philanthropist who rose to fame as a member of the music duo Wham! He was best known for his work in the 1980s and 1990s, including hit singles ','http://img.wennermedia.com/480-width/george-75b14a92-253c-420d-a2c2-d3a431d19c24.jpg'),(7,'Rihanna','Robyn Rihanna Fenty known mononymously as Rihanna, is a Barbadian singer, songwriter, and actress. Born in Saint Michael, Barbados and raised in Bridgetown, during 2003 she recorded demo tapes under the direction of record producer Evan Rogers and signed a recording contract','https://n1s1.elle.ru/84/8d/55/848d554f90fb26f17531af8d460daee3/460x650_1_f99bd19c581173a181239804b661e463@460x650_0xc35dbb80_10059974911504876848.png'),(8,'Bruce Springsteen','Брюс Фредерик Джозеф Спрингстин (англ. Bruce Frederick Joseph Springsteen; род. 23 сентября 1949 года, Лонг-Бранч, Нью-Джерси, США) — американский рок- и фолк-музыкант и автор песен. Стал известен благодаря своим рок-песням с поэтичными текстами, основной темой которых является его ...','http://static.tvtropes.org/pmwiki/pub/images/bruce-springsteen.jpg'),(10,'Kendrick Lamar','','https://www.famousbirthdays.com/faces/lamar-kendrick-image.jpg'),(12,'Soul II Soul','',''),(14,'k.d. lang','',''),(25,'Kaleo','исландская музыкальная группа, созданная в 2012 году. В состав входят: Йокуль Юлиуссон, Давид Антонссон, Даниль Кристьянсон, Рубин Поллок.\n\nЗа 4 года существования группа выпустила 2 альбома: «Kaleo» (2013) и «A/B» (2016), а также 1 EP — «Glasshouse» (2013).','http://cdndl.zaycev.net/commonImage/274151_square250.jpg'),(26,'Bruce Springsteen','',''),(27,'Nothing More','',''),(28,'The Doors','',''),(29,'Dua Lipa','британская певица, автор песен и модель. Её музыкальная карьера началась в возрасте 14 лет, когда она начала размещать на YouTube кавер-версии песен Кристины Агилеры и Нелли Фуртадо.','http://www.radiopoison.com/wp-content/uploads/2017/09/duaa.jpg'),(30,'Taylor Swift','',''),(31,'Dashboard Confessional','',''),(32,'Led Zeppelin','',''),(33,'Nine Inch Nails','',''),(34,'P!nk','','https://www.billboard.com/files/styles/article_main_image/public/stylus/501138-pink-617-409.jpg'),(35,'Aretha Franklin','','https://www.biography.com/.image/c_fit,cs_srgb,h_406,q_50,w_620/MTE5NDg0MDU0OTY5MTU3MTM1/aretha-franklin-1-raw.jpg'),(36,'Nina Simone','ina Simone was an American singer, songwriter, pianist, arranger, and activist in the Civil Rights Movement. Simone employed a broad range of musical styles including classical, jazz, blues, folk, R','http://ninasimone.com/wp-content/uploads/2010/09/nina_hpos.jpg'),(37,'Coolio','',''),(38,'Serena Ryder','','https://cdn.torontolife.com/wp-content/uploads/2013/05/serena-ryder-spotlight.jpg'),(39,'MGMT','','https://cdn-s3.allmusic.com/release-covers/500/0000/716/0000716356.jpg'),(40,'Pearl Jam','','https://www.alternativenation.net/wp-content/uploads/2017/03/pearljamblack2013.jpg'),(41,'Madonna','','http://swjournal.ru/wp-content/uploads/2016/02/1-1.png'),(42,'Bleachers','Bleachers is an American indie pop act based in New York City. It is the official stage name of songwriter and record producer Jack Antonoff, who is also part of the bands Steel Train and Fun. Bleachers\' pop music was heavily influenced by the late \'80s, early \'90s and the','https://pbs.twimg.com/profile_images/847660426393337858/3zF5tYUO_400x400.jpg'),(43,'Heart','Heart is an American rock band that first found success in Canada and later in the United States and worldwide. Over the group\'s four-decade history, it has had three primary lineups, with the constant center of the group since 1973 being sisters Ann Wilson (lead singer) and Nancy Wilson (guitarist). Heart rose to fame in','http://bhcourier.com/wp-content/uploads/2012/09/Nancy-and-Ann-Wilson-of-Heart.jpg'),(44,'Indigo Girls','','https://s-media-cache-ak0.pinimg.com/originals/ef/84/4b/ef844bd30eb2703d33323ecc80c81093.jpg'),(45,'LP',' американская певица, автор-исполнитель. Автор песен для таких исполнителей как Рианна, Кристина Агилера, Рита Ора, Backstreet Boys, Шер, Джо Уолш, Cher Lloyd, Элла Хендерсон, The Veronicas ','http://www.muzoko.ru/wp-content/uploads/2016/10/lp01.jpg'),(46,'Ria Mae','Ria MacNutt, known professionally as Ria Mae, is a Canadian singer and songwriter from Halifax, Nova Scotia.','http://m.socan.ca/files/images/RiaMae_SOCANsweat_CS.jpg');
+/*!40000 ALTER TABLE `artist` ENABLE KEYS */;
+UNLOCK TABLES;
+
 LOCK TABLES `album` WRITE;
 /*!40000 ALTER TABLE `album` DISABLE KEYS */;
 INSERT INTO `album` VALUES (1,'pop','Love You to Death',1,'Love You to Death is the eighth studio album by Canadian rock duo Tegan and Sara, released on June 3, 2016, on Neil Young\'s label Vapor Records through Warner Bros. Records. Produced by Greg Kurstin, it is the follow-up to the duo\'s 2013 release Heartthrob, also produced in part by Kurstin.[1] \"Boyfriend\" was released as the album\'s lead single on April 8, 2016. The same day, \"U-Turn\" was also released as a promotional single. As of February 2017, Love You to Death has sold 27,000 copies in the US and 50,000 worldwide.','https://upload.wikimedia.org/wikipedia/en/d/df/Tegan_and_Sara_-_Love_You_to_Death.png',2017),(2,'New wave','Pollinator',2,'Pollinator is the eleventh studio album by American rock band Blondie, released on May 5, 2017 by BMG Rights Management.','https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Blondie%27s_%22Pollinator%22_album_cover.png/220px-Blondie%27s_%22Pollinator%22_album_cover.png',NULL),(3,'rock','The Best of Blondie',2,NULL,'',1978),(4,'pop','Twenty Five',5,NULL,'https://upload.wikimedia.org/wikipedia/en/thumb/6/6b/TwentyFive_Cover.jpg/220px-TwentyFive_Cover.jpg',1990),(6,'pop','ANTI (Deluxe)',7,NULL,'https://images-na.ssl-images-amazon.com/images/I/71b2iu4ezaL._SY355_.jpg',2016),(7,'rock','Born in the U.S.A.',8,NULL,'https://upload.wikimedia.org/wikipedia/en/thumb/f/f8/BornInTheUSAsinglecover.jpg/220px-BornInTheUSAsinglecover.jpg',1984),(9,'rap','DAMN.',10,NULL,'',2017),(10,'rap','DAMN.',10,NULL,'',2017),(11,'hip-hop','Keep On Movin\'',12,NULL,'',1989),(12,'hip-hop','Keep On Movin\'',12,NULL,'',1989),(13,'pop','Hallelujah - EP',14,NULL,'',2010),(18,'rock','A / B',25,NULL,'',2015),(19,'rock','Born in the U.S.A.',8,NULL,'',1984),(20,'rock','The Stories We Tell Ourselves',27,NULL,'',2017),(21,'rock','The Very Best of the Doors',28,NULL,'',1967),(22,'pop','Dua Lipa',29,NULL,'',2017),(23,'pop','1989',30,NULL,'',2014),(24,'rock','Dusk and Summer',31,NULL,'',2007),(25,'rock','Led Zeppelin II (Remastered)',32,NULL,'',1969),(26,'rock','The Downward Spiral (Deluxe Edition)',33,NULL,'',1994),(27,'pop','Beautiful Trauma',34,NULL,'',2017),(28,'pop','Lady Soul',35,NULL,'',1967),(29,'pop','Compact Jazz: Nina Simone',36,NULL,'',1965),(30,'rap','Gangsta\'s Paradise',37,NULL,'',1995),(31,'rap','Heartthrob (Deluxe Version)',1,NULL,'',2013),(32,'pop','Electric Love',38,NULL,'',2017),(33,'rock','Little Dark Age - Single',39,NULL,'',2017),(34,'rock','Ten',40,NULL,'',1991),(35,'rock','Like a Prayer',41,NULL,'',1989),(36,'rock','Strange Desire',42,NULL,'',2014),(37,'rock','Greatest Hits',3,NULL,'',1977),(38,'rock','Indigo Girls (Expanded Edition)',44,NULL,'',1962),(39,'rock','Lost on You',45,NULL,'',2016),(40,'pop','Clothes Off - Single',46,NULL,'',2015);
@@ -50,27 +69,10 @@ UNLOCK TABLES;
 -- Table structure for table `artist`
 --
 
-DROP TABLE IF EXISTS `artist`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `artist` (
-  `ID` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) DEFAULT NULL,
-  `description` text,
-  `photo` text,
-  PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `artist`
 --
-
-LOCK TABLES `artist` WRITE;
-/*!40000 ALTER TABLE `artist` DISABLE KEYS */;
-INSERT INTO `artist` VALUES (1,'Tegan and Sara','Tegan and Sara /ˈtiːɡən, ˈsɛərə/ are a Canadian indie pop band formed in 1998 in Calgary, Alberta, composed of identical twin sisters Tegan Rain Quin and Sara Keirsten Quin (born September 19, 1980).[2][3] Both musicians are songwriters and multi-instrumentalists.','https://media.glamour.com/photos/575f282a225ba9336fea5689/1:1/w_352/TeganAndSara-01.jpg'),(2,'Blondie','Blondie is an American rock band founded by singer Debbie Harry and guitarist Chris Stein.[1] The band was a pioneer in the early American new wave and punk scenes of the mid-late 1970s. Its first two albums contained strong elements of these genres, and although successful in the United Kingdom and Australia, Blondie was regarded as an underground band in the United States until the release of Parallel Lines in 1978. Over the next three years, the band achieved several hit singles[2] including \"Heart of Glass\", \"Call Me\", \"Rapture\" and \"The Tide Is High\" and became noted for its eclectic mix of musical styles incorporating elements of disco, pop, reggae, and early rap music.','https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Blondie1977.jpg/1200px-Blondie1977.jpg'),(3,'Heart',' Heart is an American rock band that first found success in Canada and later in the United States and worldwide. Over the group\'s four-decade history, it has had three primary lineups, with the constant center of the group since 1973 being sisters Ann Wilson (lead singer) and Nancy Wilson (guitarist).','http://img.wennermedia.com/social/rs-248025-RS-Heart.jpg'),(4,'Muse','британская рок-группа, образованная в 1994 году в городе Тинмут (графство Девон). Группа состоит из трёх участников: Мэттью Беллами (вокал, гитара, клавиши), Криса Уолстенхолма (бас-гитара, бэк-вокал, вокал) и Доминика Ховарда (ударные).','http://images.genius.com/01ea82c74a235e08af02847715fcab35.750x750x1.jpg'),(5,'George Michael','Georgios Kyriacos Panayiotou (25 June 1963 – 25 December 2016), known professionally as George Michael, was an English singer, songwriter, record producer, and philanthropist who rose to fame as a member of the music duo Wham! He was best known for his work in the 1980s and 1990s, including hit singles ','http://img.wennermedia.com/480-width/george-75b14a92-253c-420d-a2c2-d3a431d19c24.jpg'),(7,'Rihanna','Robyn Rihanna Fenty known mononymously as Rihanna, is a Barbadian singer, songwriter, and actress. Born in Saint Michael, Barbados and raised in Bridgetown, during 2003 she recorded demo tapes under the direction of record producer Evan Rogers and signed a recording contract','https://n1s1.elle.ru/84/8d/55/848d554f90fb26f17531af8d460daee3/460x650_1_f99bd19c581173a181239804b661e463@460x650_0xc35dbb80_10059974911504876848.png'),(8,'Bruce Springsteen','Брюс Фредерик Джозеф Спрингстин (англ. Bruce Frederick Joseph Springsteen; род. 23 сентября 1949 года, Лонг-Бранч, Нью-Джерси, США) — американский рок- и фолк-музыкант и автор песен. Стал известен благодаря своим рок-песням с поэтичными текстами, основной темой которых является его ...','http://static.tvtropes.org/pmwiki/pub/images/bruce-springsteen.jpg'),(10,'Kendrick Lamar','','https://www.famousbirthdays.com/faces/lamar-kendrick-image.jpg'),(12,'Soul II Soul','',''),(14,'k.d. lang','',''),(25,'Kaleo','исландская музыкальная группа, созданная в 2012 году. В состав входят: Йокуль Юлиуссон, Давид Антонссон, Даниль Кристьянсон, Рубин Поллок.\n\nЗа 4 года существования группа выпустила 2 альбома: «Kaleo» (2013) и «A/B» (2016), а также 1 EP — «Glasshouse» (2013).','http://cdndl.zaycev.net/commonImage/274151_square250.jpg'),(26,'Bruce Springsteen','',''),(27,'Nothing More','',''),(28,'The Doors','',''),(29,'Dua Lipa','британская певица, автор песен и модель. Её музыкальная карьера началась в возрасте 14 лет, когда она начала размещать на YouTube кавер-версии песен Кристины Агилеры и Нелли Фуртадо.','http://www.radiopoison.com/wp-content/uploads/2017/09/duaa.jpg'),(30,'Taylor Swift','',''),(31,'Dashboard Confessional','',''),(32,'Led Zeppelin','',''),(33,'Nine Inch Nails','',''),(34,'P!nk','','https://www.billboard.com/files/styles/article_main_image/public/stylus/501138-pink-617-409.jpg'),(35,'Aretha Franklin','','https://www.biography.com/.image/c_fit,cs_srgb,h_406,q_50,w_620/MTE5NDg0MDU0OTY5MTU3MTM1/aretha-franklin-1-raw.jpg'),(36,'Nina Simone','ina Simone was an American singer, songwriter, pianist, arranger, and activist in the Civil Rights Movement. Simone employed a broad range of musical styles including classical, jazz, blues, folk, R','http://ninasimone.com/wp-content/uploads/2010/09/nina_hpos.jpg'),(37,'Coolio','',''),(38,'Serena Ryder','','https://cdn.torontolife.com/wp-content/uploads/2013/05/serena-ryder-spotlight.jpg'),(39,'MGMT','','https://cdn-s3.allmusic.com/release-covers/500/0000/716/0000716356.jpg'),(40,'Pearl Jam','','https://www.alternativenation.net/wp-content/uploads/2017/03/pearljamblack2013.jpg'),(41,'Madonna','','http://swjournal.ru/wp-content/uploads/2016/02/1-1.png'),(42,'Bleachers','Bleachers is an American indie pop act based in New York City. It is the official stage name of songwriter and record producer Jack Antonoff, who is also part of the bands Steel Train and Fun. Bleachers\' pop music was heavily influenced by the late \'80s, early \'90s and the','https://pbs.twimg.com/profile_images/847660426393337858/3zF5tYUO_400x400.jpg'),(43,'Heart','Heart is an American rock band that first found success in Canada and later in the United States and worldwide. Over the group\'s four-decade history, it has had three primary lineups, with the constant center of the group since 1973 being sisters Ann Wilson (lead singer) and Nancy Wilson (guitarist). Heart rose to fame in','http://bhcourier.com/wp-content/uploads/2012/09/Nancy-and-Ann-Wilson-of-Heart.jpg'),(44,'Indigo Girls','','https://s-media-cache-ak0.pinimg.com/originals/ef/84/4b/ef844bd30eb2703d33323ecc80c81093.jpg'),(45,'LP',' американская певица, автор-исполнитель. Автор песен для таких исполнителей как Рианна, Кристина Агилера, Рита Ора, Backstreet Boys, Шер, Джо Уолш, Cher Lloyd, Элла Хендерсон, The Veronicas ','http://www.muzoko.ru/wp-content/uploads/2016/10/lp01.jpg'),(46,'Ria Mae','Ria MacNutt, known professionally as Ria Mae, is a Canadian singer and songwriter from Halifax, Nova Scotia.','http://m.socan.ca/files/images/RiaMae_SOCANsweat_CS.jpg');
-/*!40000 ALTER TABLE `artist` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `challenge_song`
@@ -121,34 +123,6 @@ LOCK TABLES `challenges` WRITE;
 /*!40000 ALTER TABLE `challenges` DISABLE KEYS */;
 INSERT INTO `challenges` VALUES (1,'easy',5,'first challenge');
 /*!40000 ALTER TABLE `challenges` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `score`
---
-
-DROP TABLE IF EXISTS `score`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `score` (
-  `ID` int(11) NOT NULL AUTO_INCREMENT,
-  `user_id` int(11) DEFAULT NULL,
-  `wins` int(11) DEFAULT NULL,
-  `losses` int(11) DEFAULT NULL,
-  PRIMARY KEY (`ID`),
-  KEY `Score_fk0` (`user_id`),
-  CONSTRAINT `Score_fk0` FOREIGN KEY (`user_id`) REFERENCES `user` (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `score`
---
-
-LOCK TABLES `score` WRITE;
-/*!40000 ALTER TABLE `score` DISABLE KEYS */;
-INSERT INTO `score` VALUES (1,1,112,373),(3,6,8,27);
-/*!40000 ALTER TABLE `score` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -211,6 +185,34 @@ INSERT INTO `user` VALUES (1,'admin','admin','Anna','Dodonova','admin'),(6,'batm
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+--
+-- Table structure for table `score`
+--
+
+DROP TABLE IF EXISTS `score`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `score` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `wins` int(11) DEFAULT NULL,
+  `losses` int(11) DEFAULT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `Score_fk0` (`user_id`),
+  CONSTRAINT `Score_fk0` FOREIGN KEY (`user_id`) REFERENCES `user` (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `score`
+--
+
+LOCK TABLES `score` WRITE;
+/*!40000 ALTER TABLE `score` DISABLE KEYS */;
+INSERT INTO `score` VALUES (1,1,112,373),(3,6,8,27);
+/*!40000 ALTER TABLE `score` ENABLE KEYS */;
+UNLOCK TABLES;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
