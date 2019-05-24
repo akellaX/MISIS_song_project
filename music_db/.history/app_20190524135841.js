@@ -107,9 +107,6 @@ app.post("/main/giveChallengeSong", urlencodedParser, function(req, res) {
 });
 
 app.post("/checkLogIn", urlencodedParser, function(req, res) {
-    if (!req.body.login || !req.body.password) {
-        return;
-    }
   var sql =
     'SELECT id, password, type from user where login="' + req.body.login + '"';
   var q = db.query(sql, function(err, rows) {

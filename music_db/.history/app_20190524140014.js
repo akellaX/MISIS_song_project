@@ -107,7 +107,7 @@ app.post("/main/giveChallengeSong", urlencodedParser, function(req, res) {
 });
 
 app.post("/checkLogIn", urlencodedParser, function(req, res) {
-    if (!req.body.login || !req.body.password) {
+    if (!req.body.login || req.body.password) {
         return;
     }
   var sql =

@@ -32,7 +32,7 @@ $('#loginbtn').on('click',function(e){
 	var pass = $('#password').val();
 	var login = $('#loginfield').val();
 
-	if (!login || !pass) {
+	if (login && pass) {
 		alert('write down login and/or password');
 		return;
 	}

@@ -32,10 +32,6 @@ $('#loginbtn').on('click',function(e){
 	var pass = $('#password').val();
 	var login = $('#loginfield').val();
 
-	if (!login || !pass) {
-		alert('write down login and/or password');
-		return;
-	}
 	$.ajax({
 		type: 'POST',
 		url: 'http://localhost:3000/checkLogIn',
