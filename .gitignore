@@ -1,3 +1,5 @@
 node_modules
 .idea
 .DS_Store
+
+wrong_auth_fix music_db/public/js/index.js
