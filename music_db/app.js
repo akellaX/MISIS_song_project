@@ -1,3 +1,4 @@
+var JSAlert = require("js-alert");
 var express = require("express");
 var app = express();
 var http = require("http");
@@ -115,6 +116,10 @@ app.post("/checkLogIn", urlencodedParser, function(req, res) {
   var q = db.query(sql, function(err, rows) {
     if (err) throw err;
     else {
+      if (!rows[0]) {
+        JSAlert.alert('wrong password/login');
+        return;
+      }
       login = req.body.login;
       if (rows[0].password == req.body.password) {
         user_id = rows[0].id;
